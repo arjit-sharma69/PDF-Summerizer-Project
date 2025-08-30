@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // For global hosting, set VITE_API_BASE to your backend URL (e.g., https://api.yourapp.com)
 // Falls back to localhost for dev.
-const BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5001';
+const BASE = 'https://pdf-summerizer-project-backend.onrender.com'
 
 export async function extractFile(file) {
   const fd = new FormData();
