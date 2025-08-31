@@ -53,7 +53,8 @@ export default function App() {
       <Container maxWidth="md" sx={{ py: 4 }}>
         <Stack spacing={3}>
           <Typography variant="h4" align="center" fontWeight={700}>PDF Summarizer</Typography>
-
+          <Typography variant="p" align="center" fontWeight={200}>Deployed on Free Version. Please wait for a few minutes to generate the Summary</Typography>
+          
           <DropZone onFile={setFile} />
           {file && (
             <Paper variant="outlined" sx={{ p: 2 }}>
