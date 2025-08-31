@@ -53,3 +53,4 @@ The project addresses the challenge of extracting and summarizing content from b
 
 ---
 
+👉 **Live Demo:** [https://pdf-summerizer-project-frontend.onrender.com](https://pdf-summerizer-project-frontend.onrender.com)
