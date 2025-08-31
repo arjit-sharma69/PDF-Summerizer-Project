@@ -72,12 +72,8 @@ The project addresses the challenge of extracting and summarizing content from b
 ```bash
 cd server
 npm install
-
-# Allow any origin locally (dev)
-export ALLOWED_ORIGINS='*'       # macOS/Linux
-# setx ALLOWED_ORIGINS "*"       # Windows PowerShell (user env)
-
 npm start
+
 # → prints "Server running on :5000" (or :5001 if 5000 is in use)
 ```
 
