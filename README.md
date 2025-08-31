@@ -53,4 +53,50 @@ The project addresses the challenge of extracting and summarizing content from b
 
 ---
 
+---
+
+## 🛠️ Prerequisites
+
+- **Node.js** v18+ (or v20+ recommended)
+- **Poppler** (`pdftoppm`) for scanned PDFs → images → OCR
+  - macOS: `brew install poppler`
+  - Ubuntu/Debian: `sudo apt-get install poppler-utils`
+  - Windows: install Poppler and add its `bin` to PATH (or set `PDFTOPPM_PATH`)
+- **tesseract.js** downloads English trained data automatically on first run
+
+---
+
+## 🚀 Quick Start (Local Development)
+
+### 1) Start the server
+```bash
+cd server
+npm install
+
+# Allow any origin locally (dev)
+export ALLOWED_ORIGINS='*'       # macOS/Linux
+# setx ALLOWED_ORIGINS "*"       # Windows PowerShell (user env)
+
+npm start
+# → prints "Server running on :5000" (or :5001 if 5000 is in use)
+```
+
+### 2) Start the client
+```bash
+cd client
+npm install
+
+# Point the frontend to your server URL (default is localhost:5000)
+printf "VITE_API_BASE=http://localhost:5000
+" > .env   # macOS/Linux
+# "VITE_API_BASE=http://localhost:5000" | Out-File -Encoding ascii .env  # Windows
+
+npm run dev
+# open http://localhost:5173
+```
+
+> If the server fell back to a different port (e.g., 5001), update `client/.env` accordingly and restart `npm run dev`.
+
+---
+
 👉 **Live Demo:** [https://pdf-summerizer-project-frontend.onrender.com](https://pdf-summerizer-project-frontend.onrender.com)
